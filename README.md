@@ -1,7 +1,7 @@
 # phylo-tools
 This repository contains tools for phylogenetic tree manipulation
 
-## `findtrunk.py` 
+## `findtrunk.py`
 
 This script reconstructs the phylogenetic tree trunk using a reverse-traversal method. The tree
 topology is traversed backward starting iteratively from each leaf in the tree. The program
@@ -10,5 +10,14 @@ called "trunk" associated to each edge in the topology.
 
         $ python3 findtrunk.py -i input_tree.tree --input-format nexus
 
-[Goto documentation](http://lorenzogatti.me/phylo-tools/findtrunk.m.html) 
-        
+[Goto documentation](http://lorenzogatti.me/phylo-tools/findtrunk.m.html)
+
+
+## `trunktraitevolution.py`
+
+This script computes the permanence and the number of switches of a discrete trait on  the tree
+trunk.
+
+        $ python3 trunktraitevolution.py -i input_tree.tree --input-format nexus --feature location
+
+[Goto documentation](http://lorenzogatti.me/phylo-tools/trunktraitevolution.m.html)
