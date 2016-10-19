@@ -79,6 +79,30 @@ __maintainer__ = "Lorenzo Gatti"
 __email__ = "lorenzo.gatti@zhaw.ch"
 __status__ = "Development"
 
+# Classes
+
+class CEdges:
+    """
+       This class contains all the methods associated to object of class Edge
+
+    """
+    def __init__(self):
+        self.edge_number = int()
+
+    def count_edges(self, tree):
+        """
+           This method counts all the edges in the tree topology
+
+           Returns:
+               It assign the total number of edges to the edge_number object in the self contenitor
+        """
+        self.edge_number = 0
+
+        for edge in tree.levelorder_edge_iter():
+            self.edge_number += 1
+
+
+
 
 # Routines
 def arg_parser():
@@ -193,6 +217,11 @@ def main(args):
     # Add feature on topology
     for edge in tree.levelorder_edge_iter():
         edge.annotations.add_new(name="trunk", value=edgedict[edge.label])
+
+    # Count all the edges in the tree topology (TEST)
+    inst_edges = CEdges()
+    inst_edges.count_edges(tree)
+    logging.debug(__project__ + ":" + __product__ + " - Total number of edges is " + str(inst_edges.edge_number))
 
     # ------------------------------------------------------------------------------------------
     # Save new tree topology
