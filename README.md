@@ -1,4 +1,4 @@
-# phylo-tools
+# phylo-tools [![Build Status](https://travis-ci.org/gattil/phylo-tools.svg?branch=master)](https://travis-ci.org/gattil/phylo-tools)
 This repository contains tools for phylogenetic tree manipulation
 
 ## `findtrunk.py`
