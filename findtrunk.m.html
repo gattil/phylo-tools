@@ -852,71 +852,6 @@ table {
 
   </style>
 
-  <style type="text/css">
-  .codehilite .hll { background-color: #ffffcc }
-.codehilite  { background: #f8f8f8; }
-.codehilite .c { color: #408080; font-style: italic } /* Comment */
-.codehilite .err { border: 1px solid #FF0000 } /* Error */
-.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
-.codehilite .o { color: #666666 } /* Operator */
-.codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
-.codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
-.codehilite .gd { color: #A00000 } /* Generic.Deleted */
-.codehilite .ge { font-style: italic } /* Generic.Emph */
-.codehilite .gr { color: #FF0000 } /* Generic.Error */
-.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.codehilite .gi { color: #00A000 } /* Generic.Inserted */
-.codehilite .go { color: #888888 } /* Generic.Output */
-.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.codehilite .gs { font-weight: bold } /* Generic.Strong */
-.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.codehilite .gt { color: #0044DD } /* Generic.Traceback */
-.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
-.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.codehilite .kt { color: #B00040 } /* Keyword.Type */
-.codehilite .m { color: #666666 } /* Literal.Number */
-.codehilite .s { color: #BA2121 } /* Literal.String */
-.codehilite .na { color: #7D9029 } /* Name.Attribute */
-.codehilite .nb { color: #008000 } /* Name.Builtin */
-.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.codehilite .no { color: #880000 } /* Name.Constant */
-.codehilite .nd { color: #AA22FF } /* Name.Decorator */
-.codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.codehilite .nf { color: #0000FF } /* Name.Function */
-.codehilite .nl { color: #A0A000 } /* Name.Label */
-.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.codehilite .nv { color: #19177C } /* Name.Variable */
-.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
-.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
-.codehilite .mf { color: #666666 } /* Literal.Number.Float */
-.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
-.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
-.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
-.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
-.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
-.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
-.codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.codehilite .sx { color: #008000 } /* Literal.String.Other */
-.codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
-.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
-.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
-.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.codehilite .vc { color: #19177C } /* Name.Variable.Class */
-.codehilite .vg { color: #19177C } /* Name.Variable.Global */
-.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
-.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
-  </style>
 
   <style type="text/css">
   
@@ -1045,6 +980,20 @@ table {
 
     </li>
 
+    <li class="set"><h3><a href="#header-classes">Classes</a></h3>
+      <ul>
+        <li class="mono">
+        <span class="class_name"><a href="#findtrunk.CEdges">CEdges</a></span>
+        
+          
+  <ul>
+    <li class="mono"><a href="#findtrunk.CEdges.__init__">__init__</a></li>
+    <li class="mono"><a href="#findtrunk.CEdges.count_edges">count_edges</a></li>
+  </ul>
+
+        </li>
+      </ul>
+    </li>
 
     </ul>
   </div>
@@ -1063,10 +1012,8 @@ topology is traversed backward starting iteratively from each leaf in the tree. 
 counts how many times each edge is traversed and it stores the sum of the counts in a new label
 called "trunk" associated to each edge in the topology.</p>
 <h2>Example</h2>
-<div class="codehilite"><pre><span class="nv">$ </span>python3 findtrunk.py -i input_tree.tree --input-format nexus
-</pre></div>
-
-
+<pre><code>$ python3 findtrunk.py -i input_tree.tree --input-format nexus
+</code></pre>
 <h2>Arguments:</h2>
 <h4>mandatory arguments:</h4>
 <ol>
@@ -1103,220 +1050,248 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
   
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-findtrunk', this);">Show source &equiv;</a></p>
   <div id="source-findtrunk" class="source">
-    <div class="codehilite"><pre><span class="c">#!/usr/bin/env python3</span>
+    <pre><code>#!/usr/bin/env python3
 
-<span class="c"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
+# -*- coding: utf-8 -*-
+"""
 
-<span class="sd">This script reconstructs the phylogenetic tree trunk using a reverse-traversal method. The tree</span>
-<span class="sd">topology is traversed backward starting iteratively from each leaf in the tree. The program</span>
-<span class="sd">counts how many times each edge is traversed and it stores the sum of the counts in a new label</span>
-<span class="sd">called &quot;trunk&quot; associated to each edge in the topology.</span>
+This script reconstructs the phylogenetic tree trunk using a reverse-traversal method. The tree
+topology is traversed backward starting iteratively from each leaf in the tree. The program
+counts how many times each edge is traversed and it stores the sum of the counts in a new label
+called "trunk" associated to each edge in the topology.
 
-<span class="sd">## Example</span>
-
-
-<span class="sd">    $ python3 findtrunk.py -i input_tree.tree --input-format nexus</span>
+## Example
 
 
-<span class="sd">## Arguments:</span>
-
-<span class="sd">#### mandatory arguments:</span>
-
-<span class="sd">1. -i INPUT_FILE  Input filepath of the tree file</span>
-<span class="sd">2. --input-format INPUT_FORMAT String indicating tree file format (i.e. nexus, newick, phy, ...)</span>
-
-<span class="sd">#### optional arguments:</span>
-
-<span class="sd">1.  -o/--out OUTPUT_FILE  Output tree file name</span>
-<span class="sd">2.  -l/--label DATA_LABEL Additional label for the data contained in the tree file</span>
-<span class="sd">3.  --log LOG_LEVEL       Log level for the routine (--log=INFO)</span>
-<span class="sd">4.  --log_to_file LOG_TO_FILE Log filename for the routine</span>
-
-<span class="sd">## Compatibility</span>
-<span class="sd">`findtrunk` has been tested on Python 3.4</span>
+    $ python3 findtrunk.py -i input_tree.tree --input-format nexus
 
 
-<span class="sd">## Contributing</span>
-<span class="sd">`findtrunk` [is on GitHub](https://github.com/gattil/phylo-tools). Pull requests and bug reports</span>
-<span class="sd">are welcome.</span>
+## Arguments:
 
-<span class="sd">## Licence</span>
-<span class="sd">`findtrunk` is in the public domain under MIT licence</span>
+#### mandatory arguments:
 
-<span class="sd">&gt; The MIT License (MIT)</span>
+1. -i INPUT_FILE  Input filepath of the tree file
+2. --input-format INPUT_FORMAT String indicating tree file format (i.e. nexus, newick, phy, ...)
 
-<span class="sd">&gt; Copyright (c) 2016 Lorenzo Gatti</span>
+#### optional arguments:
 
-<span class="sd">&gt; Permission is hereby granted, free of charge, to any person obtaining a copy of this software</span>
-<span class="sd">and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</span>
+1.  -o/--out OUTPUT_FILE  Output tree file name
+2.  -l/--label DATA_LABEL Additional label for the data contained in the tree file
+3.  --log LOG_LEVEL       Log level for the routine (--log=INFO)
+4.  --log_to_file LOG_TO_FILE Log filename for the routine
 
-<span class="sd">&gt; The above copyright notice and this permission notice shall be included in all copies or</span>
-<span class="sd">substantial portions of the Software.</span>
-
-<span class="sd">&gt; THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING</span>
-<span class="sd">BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND</span>
-<span class="sd">NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,</span>
-<span class="sd">DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
-<span class="sd">OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span>
+## Compatibility
+`findtrunk` has been tested on Python 3.4
 
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="c"># Import section (built-in modules|third-party modules)</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">argparse</span>
-<span class="kn">import</span> <span class="nn">dendropy</span>
-<span class="kn">import</span> <span class="nn">os.path</span>
-<span class="kn">import</span> <span class="nn">logging</span>
+## Contributing
+`findtrunk` [is on GitHub](https://github.com/gattil/phylo-tools). Pull requests and bug reports
+are welcome.
 
-<span class="c"># Authorship information</span>
+## Licence
+`findtrunk` is in the public domain under MIT licence
 
-<span class="n">__project__</span> <span class="o">=</span> <span class="s">&#39;phylo-tools&#39;</span>
-<span class="n">__product__</span> <span class="o">=</span> <span class="s">&#39;findtrunk&#39;</span>
-<span class="n">__editor__</span> <span class="o">=</span> <span class="s">&#39;PyCharm&#39;</span>
-<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;lorenzogatti&#39;</span>
-<span class="n">__copyright__</span> <span class="o">=</span> <span class="s">&quot;Copyright 2016, Applied Computational Genomics Team (ACGT)&quot;</span>
-<span class="n">__credits__</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Lorenzo Gatti&quot;</span><span class="p">]</span>
-<span class="n">__license__</span> <span class="o">=</span> <span class="s">&quot;GPL&quot;</span>
-<span class="n">__date__</span> <span class="o">=</span> <span class="s">&#39;16/06/16&#39;</span>
-<span class="n">__version__</span> <span class="o">=</span> <span class="s">&quot;1.0&quot;</span>
-<span class="n">__maintainer__</span> <span class="o">=</span> <span class="s">&quot;Lorenzo Gatti&quot;</span>
-<span class="n">__email__</span> <span class="o">=</span> <span class="s">&quot;lorenzo.gatti@zhaw.ch&quot;</span>
-<span class="n">__status__</span> <span class="o">=</span> <span class="s">&quot;Development&quot;</span>
+> The MIT License (MIT)
 
+> Copyright (c) 2016 Lorenzo Gatti
 
-<span class="c"># Routines</span>
-<span class="k">def</span> <span class="nf">arg_parser</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function parses the arguments passed from the command line to the script</span>
+> Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-<span class="sd">    Returns:</span>
-<span class="sd">        It returns an object containing all the recognised arguments properly formatted</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+> The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
 
-    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s">&#39;findtrunk.py&#39;</span><span class="p">,</span>
-                                     <span class="n">description</span><span class="o">=</span><span class="s">&#39;Retrieve the phylogenetic trunk from the tree &#39;</span>
-                                                 <span class="s">&#39;topology using a reverse-tree-traversal &#39;</span>
-                                                 <span class="s">&#39;approach.&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-i&quot;</span><span class="p">,</span> <span class="s">&quot;--in&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;input_file&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s">&#39;Input tree file&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--input-format&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;input_format&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s">&#39;Input tree file format&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-o&quot;</span><span class="p">,</span> <span class="s">&quot;--out&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;output_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Output tree file&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-l&quot;</span><span class="p">,</span> <span class="s">&quot;--label&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;data_label&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Label for the data contained in the tree&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--log&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;log_level&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;INFO&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Log level for the routine (--log=INFO)&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--log_to_file&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;log_to_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">bool</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Log filename for the routine&#39;</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function executes the routines required by the program to identify the tree trunk and it</span>
-<span class="sd">    returns a fully labeled tree topology in a new tree file.</span>
+"""
+# Import section (built-in modules|third-party modules)
+import sys
+import argparse
+import dendropy
+import os.path
+import logging
 
-<span class="sd">    `args` is a the object returned by `arg_parser` function.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+# Authorship information
 
-    <span class="c"># Prepare output variables</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="p">:</span>
-        <span class="n">args</span><span class="o">.</span><span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">data_label</span> <span class="o">+</span> <span class="s">&#39;_out.tree&#39;</span>
+__project__ = 'phylo-tools'
+__product__ = 'findtrunk'
+__editor__ = 'PyCharm'
+__author__ = 'lorenzogatti'
+__copyright__ = "Copyright 2016, Applied Computational Genomics Team (ACGT)"
+__credits__ = ["Lorenzo Gatti"]
+__license__ = "GPL"
+__date__ = '16/06/16'
+__version__ = "1.0"
+__maintainer__ = "Lorenzo Gatti"
+__email__ = "lorenzo.gatti@zhaw.ch"
+__status__ = "Development"
 
-    <span class="c"># Prepare logging device</span>
-    <span class="n">numeric_level</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">logging</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">log_level</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numeric_level</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;Invalid log level: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">args</span><span class="o">.</span><span class="n">log_level</span><span class="p">)</span>
+# Classes
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__product__</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">log_to_file</span><span class="p">:</span>
+class CEdges:
+    """
+       This class contains all the methods associated to object of class Edge
 
-        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">log_file</span><span class="p">,</span>
-                            <span class="n">level</span><span class="o">=</span><span class="n">numeric_level</span><span class="p">,</span>
-                            <span class="n">format</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(levelname)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
-                            <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
+    """
+    def __init__(self):
+        self.edge_number = int()
 
-        <span class="n">args</span><span class="o">.</span><span class="n">log_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">data_label</span> <span class="o">+</span> <span class="s">&#39;_out.log&#39;</span>
+    def count_edges(self, tree):
+        """
+           This method counts all the edges in the tree topology
 
-        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">numeric_level</span><span class="p">,</span>
-                            <span class="n">format</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(levelname)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
-                            <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
+           Returns:
+               It assign the total number of edges to the edge_number object in the self contenitor
+        """
+        self.edge_number = 0
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">__product__</span><span class="o">+</span><span class="s">&quot; - Execution started&quot;</span><span class="p">)</span>
-
-    <span class="c"># Read the tree file</span>
-    <span class="n">tree</span> <span class="o">=</span> <span class="n">dendropy</span><span class="o">.</span><span class="n">Tree</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">,</span>
-                             <span class="n">schema</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input_format</span><span class="p">,</span>
-                             <span class="n">extract_comment_metadata</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-    <span class="c"># Initialise feature-storing-objects</span>
-    <span class="n">edgedict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="n">edgelist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-
-    <span class="c"># ------------------------------------------------------------------------------------------</span>
-    <span class="c"># Add UIDs to each node/edge in the tree</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - Adding UIDs to nodes&quot;</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">levelorder_node_iter</span><span class="p">():</span>
-        <span class="n">node</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">i</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s"> | Labelling node: </span><span class="si">%3d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">),</span> <span class="n">i</span><span class="p">))</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - Adding UIDs to edges&quot;</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">levelorder_edge_iter</span><span class="p">():</span>
-        <span class="n">edge</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">i</span>
-        <span class="n">edgedict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s"> | Labelling edge: </span><span class="si">%3d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">),</span> <span class="n">i</span><span class="p">))</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
-
-    <span class="c"># ------------------------------------------------------------------------------------------</span>
-    <span class="c"># Infer the trunk from tree topology using a reverse traversal (from leaf-to-root)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - Computing relative root distances&quot;</span><span class="p">)</span>
-    <span class="n">tree</span><span class="o">.</span><span class="n">max_distance_from_root</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">leaf</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">leaf_node_iter</span><span class="p">():</span>
-
-        <span class="n">backwardnode</span> <span class="o">=</span> <span class="n">leaf</span><span class="o">.</span><span class="n">parent_node</span>
-
-        <span class="k">while</span> <span class="n">backwardnode</span><span class="o">.</span><span class="n">root_distance</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">edgelist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">backwardnode</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-
-            <span class="n">backwardnode</span> <span class="o">=</span> <span class="n">backwardnode</span><span class="o">.</span><span class="n">parent_node</span>
-
-    <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">edgelist</span><span class="p">:</span>
-        <span class="n">edgedict</span><span class="p">[</span><span class="n">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+=</span> <span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-    <span class="c"># ------------------------------------------------------------------------------------------</span>
-    <span class="c"># Add feature on topology</span>
-    <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">levelorder_edge_iter</span><span class="p">():</span>
-        <span class="n">edge</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">add_new</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;trunk&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">edgedict</span><span class="p">[</span><span class="n">edge</span><span class="o">.</span><span class="n">label</span><span class="p">])</span>
-
-    <span class="c"># ------------------------------------------------------------------------------------------</span>
-    <span class="c"># Save new tree topology</span>
-    <span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="s">&#39;nexus&#39;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">__product__</span><span class="o">+</span><span class="s">&quot; - Featured tree saved in: &quot;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="p">)</span>
+        for edge in tree.levelorder_edge_iter():
+            self.edge_number += 1
 
 
-<span class="c"># Main execution routine</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
 
-    <span class="c"># Parse calling arguments</span>
-    <span class="n">args</span> <span class="o">=</span> <span class="n">arg_parser</span><span class="p">()</span>
-    <span class="c"># Call main routine</span>
-    <span class="n">main</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
-    <span class="c"># Exit program</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
+# Routines
+def arg_parser():
+    """
+    This function parses the arguments passed from the command line to the script
 
+    Returns:
+        It returns an object containing all the recognised arguments properly formatted
+    """
+
+    parser = argparse.ArgumentParser(prog='findtrunk.py',
+                                     description='Retrieve the phylogenetic trunk from the tree '
+                                                 'topology using a reverse-tree-traversal '
+                                                 'approach.')
+    parser.add_argument("-i", "--in", type=str, dest="input_file", required=True,
+                        help='Input tree file')
+    parser.add_argument("--input-format", type=str, dest="input_format", required=True,
+                        help='Input tree file format')
+    parser.add_argument("-o", "--out", dest="output_file", type=str, required=False,
+                        default='', help='Output tree file')
+    parser.add_argument("-l", "--label", dest="data_label", type=str, required=False,
+                        default='', help='Label for the data contained in the tree')
+    parser.add_argument("--log", dest="log_level", type=str, required=False,
+                        default='INFO', help='Log level for the routine (--log=INFO)')
+    parser.add_argument("--log_to_file", dest="log_to_file", type=bool, required=False,
+                        default='', help='Log filename for the routine')
+
+    return parser.parse_args()
+
+
+def main(args):
+    """
+    This function executes the routines required by the program to identify the tree trunk and it
+    returns a fully labeled tree topology in a new tree file.
+
+    `args` is a the object returned by `arg_parser` function.
+    """
+
+    # Prepare output variables
+    if not args.output_file:
+        args.output_file = os.path.dirname(args.input_file) + '/' + args.data_label + '_out.tree'
+
+    # Prepare logging device
+    numeric_level = getattr(logging, args.log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError('Invalid log level: %s' % args.log_level)
+
+    logging.getLogger(__product__)
+    if args.log_to_file:
+
+        logging.basicConfig(filename=args.log_file,
+                            level=numeric_level,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
+    else:
+
+        args.log_file = os.path.dirname(args.input_file) + '/' + args.data_label + '_out.log'
+
+        logging.basicConfig(level=numeric_level,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
+
+    logging.debug(__project__+":"+__product__+" - Execution started")
+
+    # Read the tree file
+    tree = dendropy.Tree.get(path=args.input_file,
+                             schema=args.input_format,
+                             extract_comment_metadata=True)
+
+    # Initialise feature-storing-objects
+    edgedict = dict()
+    edgelist = list()
+
+    # ------------------------------------------------------------------------------------------
+    # Add UIDs to each node/edge in the tree
+    logging.debug(__project__ + ":" + __product__ + " - Adding UIDs to nodes")
+    i = 0
+    for node in tree.levelorder_node_iter():
+        node.label = i
+        sys.stdout.write("\r%s | Labelling node: %3d" % (os.path.basename(args.input_file), i))
+        sys.stdout.flush()
+        i += 1
+    sys.stdout.write("\n")
+
+    logging.debug(__project__ + ":" + __product__ + " - Adding UIDs to edges")
+    i = 0
+    for edge in tree.levelorder_edge_iter():
+        edge.label = i
+        edgedict[i] = 0
+        sys.stdout.write("\r%s | Labelling edge: %3d" % (os.path.basename(args.input_file), i))
+        sys.stdout.flush()
+        i += 1
+    sys.stdout.write("\n")
+
+    # ------------------------------------------------------------------------------------------
+    # Infer the trunk from tree topology using a reverse traversal (from leaf-to-root)
+    logging.debug(__project__ + ":" + __product__ + " - Computing relative root distances")
+    tree.max_distance_from_root()
+    for leaf in tree.leaf_node_iter():
+
+        backwardnode = leaf.parent_node
+
+        while backwardnode.root_distance > 0:
+            edgelist.append((backwardnode.edge.label, 1))
+
+            backwardnode = backwardnode.parent_node
+
+    for pair in edgelist:
+        edgedict[pair[0]] += pair[1]
+
+    # ------------------------------------------------------------------------------------------
+    # Add feature on topology
+    for edge in tree.levelorder_edge_iter():
+        edge.annotations.add_new(name="trunk", value=edgedict[edge.label])
+
+    # Count all the edges in the tree topology (TEST)
+    inst_edges = CEdges()
+    inst_edges.count_edges(tree)
+    logging.debug(__project__ + ":" + __product__ + " - Total number of edges is " + str(inst_edges.edge_number))
+
+    # ------------------------------------------------------------------------------------------
+    # Save new tree topology
+    tree.write(path=args.output_file, schema='nexus')
+    logging.debug(__project__+":"+__product__+" - Featured tree saved in: " + args.output_file)
+
+
+# Main execution routine
+if __name__ == "__main__":
+
+    # Parse calling arguments
+    args = arg_parser()
+    # Call main routine
+    main(args)
+
+    # Exit program
+    sys.exit(0)
+</code></pre>
   </div>
 
   </header>
@@ -1339,34 +1314,33 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-findtrunk.arg_parser', this);">Show source &equiv;</a></p>
   <div id="source-findtrunk.arg_parser" class="source">
-    <div class="codehilite"><pre><span class="k">def</span> <span class="nf">arg_parser</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function parses the arguments passed from the command line to the script</span>
+    <pre><code>def arg_parser():
+    """
+    This function parses the arguments passed from the command line to the script
 
-<span class="sd">    Returns:</span>
-<span class="sd">        It returns an object containing all the recognised arguments properly formatted</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+    Returns:
+        It returns an object containing all the recognised arguments properly formatted
+    """
 
-    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s">&#39;findtrunk.py&#39;</span><span class="p">,</span>
-                                     <span class="n">description</span><span class="o">=</span><span class="s">&#39;Retrieve the phylogenetic trunk from the tree &#39;</span>
-                                                 <span class="s">&#39;topology using a reverse-tree-traversal &#39;</span>
-                                                 <span class="s">&#39;approach.&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-i&quot;</span><span class="p">,</span> <span class="s">&quot;--in&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;input_file&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s">&#39;Input tree file&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--input-format&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;input_format&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s">&#39;Input tree file format&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-o&quot;</span><span class="p">,</span> <span class="s">&quot;--out&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;output_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Output tree file&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-l&quot;</span><span class="p">,</span> <span class="s">&quot;--label&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;data_label&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Label for the data contained in the tree&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--log&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;log_level&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;INFO&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Log level for the routine (--log=INFO)&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--log_to_file&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;log_to_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">bool</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Log filename for the routine&#39;</span><span class="p">)</span>
+    parser = argparse.ArgumentParser(prog='findtrunk.py',
+                                     description='Retrieve the phylogenetic trunk from the tree '
+                                                 'topology using a reverse-tree-traversal '
+                                                 'approach.')
+    parser.add_argument("-i", "--in", type=str, dest="input_file", required=True,
+                        help='Input tree file')
+    parser.add_argument("--input-format", type=str, dest="input_format", required=True,
+                        help='Input tree file format')
+    parser.add_argument("-o", "--out", dest="output_file", type=str, required=False,
+                        default='', help='Output tree file')
+    parser.add_argument("-l", "--label", dest="data_label", type=str, required=False,
+                        default='', help='Label for the data contained in the tree')
+    parser.add_argument("--log", dest="log_level", type=str, required=False,
+                        default='INFO', help='Log level for the routine (--log=INFO)')
+    parser.add_argument("--log_to_file", dest="log_to_file", type=bool, required=False,
+                        default='', help='Log filename for the routine')
 
-    <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-</pre></div>
-
+    return parser.parse_args()
+</code></pre>
   </div>
 </div>
 
@@ -1387,103 +1361,212 @@ returns a fully labeled tree topology in a new tree file.</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-findtrunk.main', this);">Show source &equiv;</a></p>
   <div id="source-findtrunk.main" class="source">
-    <div class="codehilite"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function executes the routines required by the program to identify the tree trunk and it</span>
-<span class="sd">    returns a fully labeled tree topology in a new tree file.</span>
+    <pre><code>def main(args):
+    """
+    This function executes the routines required by the program to identify the tree trunk and it
+    returns a fully labeled tree topology in a new tree file.
 
-<span class="sd">    `args` is a the object returned by `arg_parser` function.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+    `args` is a the object returned by `arg_parser` function.
+    """
 
-    <span class="c"># Prepare output variables</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="p">:</span>
-        <span class="n">args</span><span class="o">.</span><span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">data_label</span> <span class="o">+</span> <span class="s">&#39;_out.tree&#39;</span>
+    # Prepare output variables
+    if not args.output_file:
+        args.output_file = os.path.dirname(args.input_file) + '/' + args.data_label + '_out.tree'
 
-    <span class="c"># Prepare logging device</span>
-    <span class="n">numeric_level</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">logging</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">log_level</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numeric_level</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;Invalid log level: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">args</span><span class="o">.</span><span class="n">log_level</span><span class="p">)</span>
+    # Prepare logging device
+    numeric_level = getattr(logging, args.log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError('Invalid log level: %s' % args.log_level)
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__product__</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">log_to_file</span><span class="p">:</span>
+    logging.getLogger(__product__)
+    if args.log_to_file:
 
-        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">log_file</span><span class="p">,</span>
-                            <span class="n">level</span><span class="o">=</span><span class="n">numeric_level</span><span class="p">,</span>
-                            <span class="n">format</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(levelname)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
-                            <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
+        logging.basicConfig(filename=args.log_file,
+                            level=numeric_level,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
+    else:
 
-        <span class="n">args</span><span class="o">.</span><span class="n">log_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">data_label</span> <span class="o">+</span> <span class="s">&#39;_out.log&#39;</span>
+        args.log_file = os.path.dirname(args.input_file) + '/' + args.data_label + '_out.log'
 
-        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">numeric_level</span><span class="p">,</span>
-                            <span class="n">format</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(levelname)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
-                            <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
+        logging.basicConfig(level=numeric_level,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">__product__</span><span class="o">+</span><span class="s">&quot; - Execution started&quot;</span><span class="p">)</span>
+    logging.debug(__project__+":"+__product__+" - Execution started")
 
-    <span class="c"># Read the tree file</span>
-    <span class="n">tree</span> <span class="o">=</span> <span class="n">dendropy</span><span class="o">.</span><span class="n">Tree</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">,</span>
-                             <span class="n">schema</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input_format</span><span class="p">,</span>
-                             <span class="n">extract_comment_metadata</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    # Read the tree file
+    tree = dendropy.Tree.get(path=args.input_file,
+                             schema=args.input_format,
+                             extract_comment_metadata=True)
 
-    <span class="c"># Initialise feature-storing-objects</span>
-    <span class="n">edgedict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="n">edgelist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    # Initialise feature-storing-objects
+    edgedict = dict()
+    edgelist = list()
 
-    <span class="c"># ------------------------------------------------------------------------------------------</span>
-    <span class="c"># Add UIDs to each node/edge in the tree</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - Adding UIDs to nodes&quot;</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">levelorder_node_iter</span><span class="p">():</span>
-        <span class="n">node</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">i</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s"> | Labelling node: </span><span class="si">%3d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">),</span> <span class="n">i</span><span class="p">))</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    # ------------------------------------------------------------------------------------------
+    # Add UIDs to each node/edge in the tree
+    logging.debug(__project__ + ":" + __product__ + " - Adding UIDs to nodes")
+    i = 0
+    for node in tree.levelorder_node_iter():
+        node.label = i
+        sys.stdout.write("\r%s | Labelling node: %3d" % (os.path.basename(args.input_file), i))
+        sys.stdout.flush()
+        i += 1
+    sys.stdout.write("\n")
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - Adding UIDs to edges&quot;</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">levelorder_edge_iter</span><span class="p">():</span>
-        <span class="n">edge</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">i</span>
-        <span class="n">edgedict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\r</span><span class="si">%s</span><span class="s"> | Labelling edge: </span><span class="si">%3d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">),</span> <span class="n">i</span><span class="p">))</span>
-        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
+    logging.debug(__project__ + ":" + __product__ + " - Adding UIDs to edges")
+    i = 0
+    for edge in tree.levelorder_edge_iter():
+        edge.label = i
+        edgedict[i] = 0
+        sys.stdout.write("\r%s | Labelling edge: %3d" % (os.path.basename(args.input_file), i))
+        sys.stdout.flush()
+        i += 1
+    sys.stdout.write("\n")
 
-    <span class="c"># ------------------------------------------------------------------------------------------</span>
-    <span class="c"># Infer the trunk from tree topology using a reverse traversal (from leaf-to-root)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - Computing relative root distances&quot;</span><span class="p">)</span>
-    <span class="n">tree</span><span class="o">.</span><span class="n">max_distance_from_root</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">leaf</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">leaf_node_iter</span><span class="p">():</span>
+    # ------------------------------------------------------------------------------------------
+    # Infer the trunk from tree topology using a reverse traversal (from leaf-to-root)
+    logging.debug(__project__ + ":" + __product__ + " - Computing relative root distances")
+    tree.max_distance_from_root()
+    for leaf in tree.leaf_node_iter():
 
-        <span class="n">backwardnode</span> <span class="o">=</span> <span class="n">leaf</span><span class="o">.</span><span class="n">parent_node</span>
+        backwardnode = leaf.parent_node
 
-        <span class="k">while</span> <span class="n">backwardnode</span><span class="o">.</span><span class="n">root_distance</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">edgelist</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">backwardnode</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        while backwardnode.root_distance > 0:
+            edgelist.append((backwardnode.edge.label, 1))
 
-            <span class="n">backwardnode</span> <span class="o">=</span> <span class="n">backwardnode</span><span class="o">.</span><span class="n">parent_node</span>
+            backwardnode = backwardnode.parent_node
 
-    <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">edgelist</span><span class="p">:</span>
-        <span class="n">edgedict</span><span class="p">[</span><span class="n">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+=</span> <span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    for pair in edgelist:
+        edgedict[pair[0]] += pair[1]
 
-    <span class="c"># ------------------------------------------------------------------------------------------</span>
-    <span class="c"># Add feature on topology</span>
-    <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">levelorder_edge_iter</span><span class="p">():</span>
-        <span class="n">edge</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">add_new</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;trunk&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">edgedict</span><span class="p">[</span><span class="n">edge</span><span class="o">.</span><span class="n">label</span><span class="p">])</span>
+    # ------------------------------------------------------------------------------------------
+    # Add feature on topology
+    for edge in tree.levelorder_edge_iter():
+        edge.annotations.add_new(name="trunk", value=edgedict[edge.label])
 
-    <span class="c"># ------------------------------------------------------------------------------------------</span>
-    <span class="c"># Save new tree topology</span>
-    <span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="s">&#39;nexus&#39;</span><span class="p">)</span>
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span><span class="o">+</span><span class="s">&quot;:&quot;</span><span class="o">+</span><span class="n">__product__</span><span class="o">+</span><span class="s">&quot; - Featured tree saved in: &quot;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="p">)</span>
-</pre></div>
+    # Count all the edges in the tree topology (TEST)
+    inst_edges = CEdges()
+    inst_edges.count_edges(tree)
+    logging.debug(__project__ + ":" + __product__ + " - Total number of edges is " + str(inst_edges.edge_number))
 
+    # ------------------------------------------------------------------------------------------
+    # Save new tree topology
+    tree.write(path=args.output_file, schema='nexus')
+    logging.debug(__project__+":"+__product__+" - Featured tree saved in: " + args.output_file)
+</code></pre>
   </div>
 </div>
 
   </div>
   
 
+    <h2 class="section-title" id="header-classes">Classes</h2>
+      
+      <div class="item">
+      <p id="findtrunk.CEdges" class="name">class <span class="ident">CEdges</span></p>
+      
+  
+    <div class="desc"><p>This class contains all the methods associated to object of class Edge</p></div>
+  <div class="source_cont">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-findtrunk.CEdges', this);">Show source &equiv;</a></p>
+  <div id="source-findtrunk.CEdges" class="source">
+    <pre><code>class CEdges:
+    """
+       This class contains all the methods associated to object of class Edge
+
+    """
+    def __init__(self):
+        self.edge_number = int()
+
+    def count_edges(self, tree):
+        """
+           This method counts all the edges in the tree topology
+
+           Returns:
+               It assign the total number of edges to the edge_number object in the self contenitor
+        """
+        self.edge_number = 0
+
+        for edge in tree.levelorder_edge_iter():
+            self.edge_number += 1
+</code></pre>
+  </div>
+</div>
+
+
+      <div class="class">
+          <h3>Ancestors (in MRO)</h3>
+          <ul class="class_list">
+          <li><a href="#findtrunk.CEdges">CEdges</a></li>
+          <li>builtins.object</li>
+          </ul>
+          <h3>Static methods</h3>
+            
+  <div class="item">
+    <div class="name def" id="findtrunk.CEdges.__init__">
+    <p>def <span class="ident">__init__</span>(</p><p>self)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>Initialize self.  See help(type(self)) for accurate signature.</p></div>
+  <div class="source_cont">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-findtrunk.CEdges.__init__', this);">Show source &equiv;</a></p>
+  <div id="source-findtrunk.CEdges.__init__" class="source">
+    <pre><code>def __init__(self):
+    self.edge_number = int()
+</code></pre>
+  </div>
+</div>
+
+  </div>
+  
+            
+  <div class="item">
+    <div class="name def" id="findtrunk.CEdges.count_edges">
+    <p>def <span class="ident">count_edges</span>(</p><p>self, tree)</p>
+    </div>
+    
+
+    
+  
+    <div class="desc"><p>This method counts all the edges in the tree topology</p>
+<p>Returns:
+    It assign the total number of edges to the edge_number object in the self contenitor</p></div>
+  <div class="source_cont">
+  <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-findtrunk.CEdges.count_edges', this);">Show source &equiv;</a></p>
+  <div id="source-findtrunk.CEdges.count_edges" class="source">
+    <pre><code>def count_edges(self, tree):
+    """
+       This method counts all the edges in the tree topology
+       Returns:
+           It assign the total number of edges to the edge_number object in the self contenitor
+    """
+    self.edge_number = 0
+    for edge in tree.levelorder_edge_iter():
+        self.edge_number += 1
+</code></pre>
+  </div>
+</div>
+
+  </div>
+  
+          <h3>Instance variables</h3>
+            <div class="item">
+            <p id="findtrunk.CEdges.edge_number" class="name">var <span class="ident">edge_number</span></p>
+            
+
+            
+  
+  <div class="source_cont">
+</div>
+
+            </div>
+      </div>
+      </div>
 
   </section>
 
