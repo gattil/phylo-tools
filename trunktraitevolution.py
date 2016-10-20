@@ -173,15 +173,16 @@ def main(args):
         # per each node in the tree topology, loop over the child nodes and retrieve the length
         # of the branch grouped according to
         for node in tree.preorder_node_iter():
-
+        #for node in tree.leaf_node_iter():
             # check if the node has been already visited before
-            if 'visited' not in node.annotations.values_as_dict().keys():
-
+            #if 'visited' not in node.annotations.values_as_dict().keys():
+            if not node._annotations.get_value('visited'):
                 # get the requested annotation for the parent node
-                parent_annotation = node.annotations.values_as_dict()[args.feature_annotation]
+                #parent_annotation = node.annotations.values_as_dict()[args.feature_annotation]
+                parent_annotation = node._annotations.get_value(args.feature_annotation)
                 parent_id = node.label
-                parent_height = node.annotations.values_as_dict()['height']
-
+                #parent_height = node.annotations.values_as_dict()['height']
+                parent_height = node._annotations.get_value('height')
                 # Per each child node in the tree starting from the node selected in
                 # preorder-traversing
                 for child in node.child_nodes():
@@ -190,17 +191,18 @@ def main(args):
                     if child.label:
                         # count the number of switches for the discrete trait occurring on the
                         # trunk of the tree
-                        if int(child.annotations.values_as_dict()['trunk']) > args.trunk_threshold:
-
+                        #if int(child.annotations.values_as_dict()['trunk']) > args.trunk_threshold:
+                        if int(child._annotations.get_value('trunk')) > args.trunk_threshold:
                             # Get annotation of the current child node
-                            child_annotation = child.annotations.values_as_dict()[
-                                args.feature_annotation]
+                            child_annotation = child._annotations.get_value(args.feature_annotation)
+                         #   child_annotation = child.annotations.values_as_dict()[
+                         #       args.feature_annotation]
 
                             # Compute the permanence
                             if parent_annotation not in feature_permanence:
                                 feature_permanence[parent_annotation] = {}
 
-                            if child_annotation not in feature_permanence[parent_annotation].keys():
+                            if child_annotation not in feature_permanence[parent_annotation]:
                                 feature_permanence[parent_annotation][child_annotation] = \
                                     child.edge.length
                             else:
@@ -212,7 +214,6 @@ def main(args):
                             #    feature_permanence[child_annotation] = node.edge.length
 
                             # Call switches
-
                             if parent_annotation != child_annotation:
                                 c = 1
                                 sc += 1
@@ -223,7 +224,8 @@ def main(args):
                             writer.writerow({'FROM-ID': parent_id,
                                              'TO-ID': child.label,
                                              'F-AGE': parent_height,
-                                             'T-AGE': child.annotations.values_as_dict()['height'],
+                                             #'T-AGE': child.annotations.values_as_dict()['height'],
+                                             'T-AGE': child._annotations.get_value('height'),
                                              'DURATION': child.edge.length,
                                              'VFROM': parent_annotation,
                                              'VTO': child_annotation,
@@ -232,8 +234,8 @@ def main(args):
                             # Re-assigning internal values
                             parent_annotation = child_annotation
                             parent_id = child.label
-                            parent_height = child.annotations.values_as_dict()['height']
-
+                            #parent_height = child.annotations.values_as_dict()['height']
+                            parent_height = child._annotations.get_value('height')
                             # Complete visiting the node, adding an annotation indicating the
                             # successful visit
                             child.annotations.add_new(name="visited", value=1)
@@ -247,8 +249,8 @@ def main(args):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for vfrom in feature_permanence.keys():
-            for vto in feature_permanence[vfrom].keys():
+        for vfrom in feature_permanence:
+            for vto in feature_permanence[vfrom]:
                 if vfrom == vto:
                     writer.writerow({'VFROM': vfrom,
                                      'VTO': vto,
