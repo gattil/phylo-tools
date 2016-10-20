@@ -852,71 +852,6 @@ table {
 
   </style>
 
-  <style type="text/css">
-  .codehilite .hll { background-color: #ffffcc }
-.codehilite  { background: #f8f8f8; }
-.codehilite .c { color: #408080; font-style: italic } /* Comment */
-.codehilite .err { border: 1px solid #FF0000 } /* Error */
-.codehilite .k { color: #008000; font-weight: bold } /* Keyword */
-.codehilite .o { color: #666666 } /* Operator */
-.codehilite .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.codehilite .cp { color: #BC7A00 } /* Comment.Preproc */
-.codehilite .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.codehilite .cs { color: #408080; font-style: italic } /* Comment.Special */
-.codehilite .gd { color: #A00000 } /* Generic.Deleted */
-.codehilite .ge { font-style: italic } /* Generic.Emph */
-.codehilite .gr { color: #FF0000 } /* Generic.Error */
-.codehilite .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.codehilite .gi { color: #00A000 } /* Generic.Inserted */
-.codehilite .go { color: #888888 } /* Generic.Output */
-.codehilite .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.codehilite .gs { font-weight: bold } /* Generic.Strong */
-.codehilite .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.codehilite .gt { color: #0044DD } /* Generic.Traceback */
-.codehilite .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.codehilite .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.codehilite .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.codehilite .kp { color: #008000 } /* Keyword.Pseudo */
-.codehilite .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.codehilite .kt { color: #B00040 } /* Keyword.Type */
-.codehilite .m { color: #666666 } /* Literal.Number */
-.codehilite .s { color: #BA2121 } /* Literal.String */
-.codehilite .na { color: #7D9029 } /* Name.Attribute */
-.codehilite .nb { color: #008000 } /* Name.Builtin */
-.codehilite .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.codehilite .no { color: #880000 } /* Name.Constant */
-.codehilite .nd { color: #AA22FF } /* Name.Decorator */
-.codehilite .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.codehilite .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.codehilite .nf { color: #0000FF } /* Name.Function */
-.codehilite .nl { color: #A0A000 } /* Name.Label */
-.codehilite .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.codehilite .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.codehilite .nv { color: #19177C } /* Name.Variable */
-.codehilite .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.codehilite .w { color: #bbbbbb } /* Text.Whitespace */
-.codehilite .mb { color: #666666 } /* Literal.Number.Bin */
-.codehilite .mf { color: #666666 } /* Literal.Number.Float */
-.codehilite .mh { color: #666666 } /* Literal.Number.Hex */
-.codehilite .mi { color: #666666 } /* Literal.Number.Integer */
-.codehilite .mo { color: #666666 } /* Literal.Number.Oct */
-.codehilite .sb { color: #BA2121 } /* Literal.String.Backtick */
-.codehilite .sc { color: #BA2121 } /* Literal.String.Char */
-.codehilite .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.codehilite .s2 { color: #BA2121 } /* Literal.String.Double */
-.codehilite .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.codehilite .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.codehilite .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.codehilite .sx { color: #008000 } /* Literal.String.Other */
-.codehilite .sr { color: #BB6688 } /* Literal.String.Regex */
-.codehilite .s1 { color: #BA2121 } /* Literal.String.Single */
-.codehilite .ss { color: #19177C } /* Literal.String.Symbol */
-.codehilite .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.codehilite .vc { color: #19177C } /* Name.Variable.Class */
-.codehilite .vg { color: #19177C } /* Name.Variable.Global */
-.codehilite .vi { color: #19177C } /* Name.Variable.Instance */
-.codehilite .il { color: #666666 } /* Literal.Number.Integer.Long */
-  </style>
 
   <style type="text/css">
   
@@ -1061,10 +996,8 @@ table {
   <p>This script computes the permanence and the number of switches of a discrete trait on  the tree
 trunk.</p>
 <h2>Example</h2>
-<div class="codehilite"><pre><span class="nv">$ </span>python3 trunktraitevolution.py -i input_tree.tree --input-format nexus --feature location
-</pre></div>
-
-
+<pre><code>$ python3 trunktraitevolution.py -i input_tree.tree --input-format nexus --feature location
+</code></pre>
 <h2>Arguments:</h2>
 <h4>mandatory arguments:</h4>
 <ol>
@@ -1107,276 +1040,277 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
   
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-trunktraitevolution', this);">Show source &equiv;</a></p>
   <div id="source-trunktraitevolution" class="source">
-    <div class="codehilite"><pre><span class="c">#!/usr/bin/env python3</span>
+    <pre><code>#!/usr/bin/env python3
 
-<span class="c"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;</span>
+# -*- coding: utf-8 -*-
+"""
 
-<span class="sd">This script computes the permanence and the number of switches of a discrete trait on  the tree</span>
-<span class="sd">trunk.</span>
+This script computes the permanence and the number of switches of a discrete trait on  the tree
+trunk.
 
-<span class="sd">## Example</span>
+## Example
 
 
-<span class="sd">    $ python3 trunktraitevolution.py -i input_tree.tree --input-format nexus --feature location</span>
+    $ python3 trunktraitevolution.py -i input_tree.tree --input-format nexus --feature location
 
 
-<span class="sd">## Arguments:</span>
+## Arguments:
 
-<span class="sd">#### mandatory arguments:</span>
-
-<span class="sd">1. -i INPUT_FILE  Input filepath of the tree file</span>
-<span class="sd">2. --input-format INPUT_FORMAT String indicating tree file format (i.e. nexus, newick, phy, ...)</span>
+#### mandatory arguments:
+
+1. -i INPUT_FILE  Input filepath of the tree file
+2. --input-format INPUT_FORMAT String indicating tree file format (i.e. nexus, newick, phy, ...)
 
-<span class="sd">#### optional arguments:</span>
+#### optional arguments:
 
-<span class="sd">1.  -o/--out OUTPUT_FILE  Output tree file name</span>
-<span class="sd">2.  -l/--label DATA_LABEL Additional label for the data contained in the tree file</span>
-<span class="sd">3.  --feature FEATURE_ANNOTATION Discrete trait to monitor for trunk switches</span>
-<span class="sd">4.  --trunk-threshold TRUNK_THRESHOLD Integer value indicating the lower bound to define the tree</span>
-<span class="sd">                                      trunk. When not defined, all the tree will be considered</span>
-<span class="sd">4.  --log LOG_LEVEL       Log level for the routine (--log=INFO)</span>
-<span class="sd">5.  --log_to_file LOG_TO_FILE Log filename for the routine</span>
+1.  -o/--out OUTPUT_FILE  Output tree file name
+2.  -l/--label DATA_LABEL Additional label for the data contained in the tree file
+3.  --feature FEATURE_ANNOTATION Discrete trait to monitor for trunk switches
+4.  --trunk-threshold TRUNK_THRESHOLD Integer value indicating the lower bound to define the tree
+                                      trunk. When not defined, all the tree will be considered
+4.  --log LOG_LEVEL       Log level for the routine (--log=INFO)
+5.  --log_to_file LOG_TO_FILE Log filename for the routine
 
-<span class="sd">## Compatibility</span>
-<span class="sd">`trunktraitevolution` has been tested on Python 3.4</span>
+## Compatibility
+`trunktraitevolution` has been tested on Python 3.4
 
 
-<span class="sd">## Contributing</span>
-<span class="sd">`trunktraitevolution` [is on GitHub](https://github.com/gattil/phylo-tools). Pull requests and bug</span>
-<span class="sd">reports are welcome.</span>
+## Contributing
+`trunktraitevolution` [is on GitHub](https://github.com/gattil/phylo-tools). Pull requests and bug
+reports are welcome.
 
-<span class="sd">## Licence</span>
-<span class="sd">`trunktraitevolution` is in the public domain under MIT licence</span>
+## Licence
+`trunktraitevolution` is in the public domain under MIT licence
 
-<span class="sd">&gt; The MIT License (MIT)</span>
+> The MIT License (MIT)
 
-<span class="sd">&gt; Copyright (c) 2016 Lorenzo Gatti</span>
+> Copyright (c) 2016 Lorenzo Gatti
 
-<span class="sd">&gt; Permission is hereby granted, free of charge, to any person obtaining a copy of this software</span>
-<span class="sd">and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction,</span>
-<span class="sd">including without limitation the rights to use, copy, modify, merge, publish, distribute,</span>
-<span class="sd">sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is</span>
-<span class="sd">furnished to do so, subject to the following conditions:</span>
+> Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+and associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute,
+sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-<span class="sd">&gt; The above copyright notice and this permission notice shall be included in all copies or</span>
-<span class="sd">substantial portions of the Software.</span>
+> The above copyright notice and this permission notice shall be included in all copies or
+substantial portions of the Software.
 
-<span class="sd">&gt; THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING</span>
-<span class="sd">BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND</span>
-<span class="sd">NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,</span>
-<span class="sd">DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
-<span class="sd">OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-<span class="sd">&quot;&quot;&quot;</span>
+"""
 
-<span class="c"># Import section (built-in modules|third-party modules)</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">argparse</span>
-<span class="kn">import</span> <span class="nn">dendropy</span>
-<span class="kn">import</span> <span class="nn">os.path</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">csv</span>
+# Import section (built-in modules|third-party modules)
+import sys
+import argparse
+import dendropy
+import os.path
+import logging
+import csv
 
-<span class="c"># Authorship information</span>
+# Authorship information
 
-<span class="n">__project__</span> <span class="o">=</span> <span class="s">&#39;phylo-tools&#39;</span>
-<span class="n">__product__</span> <span class="o">=</span> <span class="s">&#39;trunktraitevolution&#39;</span>
-<span class="n">__editor__</span> <span class="o">=</span> <span class="s">&#39;PyCharm&#39;</span>
-<span class="n">__author__</span> <span class="o">=</span> <span class="s">&#39;lorenzogatti&#39;</span>
-<span class="n">__copyright__</span> <span class="o">=</span> <span class="s">&quot;Copyright 2016, Applied Computational Genomics Team (ACGT)&quot;</span>
-<span class="n">__credits__</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;Lorenzo Gatti&quot;</span><span class="p">]</span>
-<span class="n">__license__</span> <span class="o">=</span> <span class="s">&quot;GPL&quot;</span>
-<span class="n">__date__</span> <span class="o">=</span> <span class="s">&#39;16/06/16&#39;</span>
-<span class="n">__version__</span> <span class="o">=</span> <span class="s">&quot;1.0&quot;</span>
-<span class="n">__maintainer__</span> <span class="o">=</span> <span class="s">&quot;Lorenzo Gatti&quot;</span>
-<span class="n">__email__</span> <span class="o">=</span> <span class="s">&quot;lorenzo.gatti@zhaw.ch&quot;</span>
-<span class="n">__status__</span> <span class="o">=</span> <span class="s">&quot;Development&quot;</span>
-
-
-<span class="c"># Routines</span>
-<span class="k">def</span> <span class="nf">arg_parser</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function parses the arguments passed from the command line to the script</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        It returns an object containing all the recognised arguments properly formatted</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s">&#39;findtrunk.py&#39;</span><span class="p">,</span>
-                                     <span class="n">description</span><span class="o">=</span><span class="s">&#39;Retrieve the phylogenetic trunk from the tree &#39;</span>
-                                                 <span class="s">&#39;topology using a reverse-tree-traversal &#39;</span>
-                                                 <span class="s">&#39;approach.&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-i&quot;</span><span class="p">,</span> <span class="s">&quot;--in&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;input_file&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s">&#39;Input tree file&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--input-format&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;input_format&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s">&#39;Input tree file format&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-o&quot;</span><span class="p">,</span> <span class="s">&quot;--out&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;output_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Output tree file&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--feature&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;feature_annotation&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Discrete trait&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--trunk-threshold&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;trunk_threshold&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Trunk value threshold&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-l&quot;</span><span class="p">,</span> <span class="s">&quot;--label&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;data_label&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Label for the data contained in the tree&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--log&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;log_level&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;INFO&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Log level for the routine (--log=INFO)&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--log_to_file&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;log_to_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">bool</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Log filename for the routine&#39;</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function executes the routines required by the program to identify the number of switches</span>
-<span class="sd">    and the permanence of the discrete trait on the tree trunk</span>
-
-<span class="sd">    `args` is a the object returned by `arg_parser` function.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="c"># Prepare output variables</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="p">:</span>
-
-        <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">data_label</span> <span class="o">+</span> <span class="s">&#39;_&#39;</span> \
-                   <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">feature_annotation</span>
-
-        <span class="n">args</span><span class="o">.</span><span class="n">output_file</span> <span class="o">=</span> <span class="n">filename</span>
-
-    <span class="c"># Prepare logging device</span>
-    <span class="n">numeric_level</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">logging</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">log_level</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numeric_level</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;Invalid log level: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">args</span><span class="o">.</span><span class="n">log_level</span><span class="p">)</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__product__</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">log_to_file</span><span class="p">:</span>
-
-        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">log_file</span><span class="p">,</span>
-                            <span class="n">level</span><span class="o">=</span><span class="n">numeric_level</span><span class="p">,</span>
-                            <span class="n">format</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(levelname)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
-                            <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-
-        <span class="n">args</span><span class="o">.</span><span class="n">log_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">data_label</span> <span class="o">+</span> <span class="s">&#39;_out.log&#39;</span>
-
-        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">numeric_level</span><span class="p">,</span>
-                            <span class="n">format</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(levelname)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
-                            <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - Execution started&quot;</span><span class="p">)</span>
-
-    <span class="c"># Read the tree file</span>
-    <span class="n">tree</span> <span class="o">=</span> <span class="n">dendropy</span><span class="o">.</span><span class="n">Tree</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">,</span>
-                             <span class="n">schema</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input_format</span><span class="p">,</span>
-                             <span class="n">extract_comment_metadata</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-    <span class="n">feature_permanence</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="o">+</span><span class="s">&#39;_switches.csv&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
-
-        <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;FROM-ID&#39;</span><span class="p">,</span> <span class="s">&#39;TO-ID&#39;</span><span class="p">,</span> <span class="s">&#39;F-AGE&#39;</span><span class="p">,</span> <span class="s">&#39;T-AGE&#39;</span><span class="p">,</span> <span class="s">&#39;DURATION&#39;</span><span class="p">,</span> <span class="s">&#39;VFROM&#39;</span><span class="p">,</span> <span class="s">&#39;VTO&#39;</span><span class="p">,</span> <span class="s">&#39;C&#39;</span><span class="p">]</span>
-        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
-        <span class="n">sc</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="c"># per each node in the tree topology, loop over the child nodes and retrieve the length</span>
-        <span class="c"># of the branch grouped according to</span>
-        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">preorder_node_iter</span><span class="p">():</span>
-
-            <span class="c"># check if the node has been already visited before</span>
-            <span class="k">if</span> <span class="s">&#39;visited&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-
-                <span class="c"># get the requested annotation for the parent node</span>
-                <span class="n">parent_annotation</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="n">args</span><span class="o">.</span><span class="n">feature_annotation</span><span class="p">]</span>
-                <span class="n">parent_id</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">label</span>
-                <span class="n">parent_height</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="s">&#39;height&#39;</span><span class="p">]</span>
-
-                <span class="c"># Per each child node in the tree starting from the node selected in</span>
-                <span class="c"># preorder-traversing</span>
-                <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">child_nodes</span><span class="p">():</span>
-
-                    <span class="c"># Check if the child has been labelled with a number</span>
-                    <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">label</span><span class="p">:</span>
-                        <span class="c"># count the number of switches for the discrete trait occurring on the</span>
-                        <span class="c"># trunk of the tree</span>
-                        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="s">&#39;trunk&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">args</span><span class="o">.</span><span class="n">trunk_threshold</span><span class="p">:</span>
-
-                            <span class="c"># Get annotation of the current child node</span>
-                            <span class="n">child_annotation</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span>
-                                <span class="n">args</span><span class="o">.</span><span class="n">feature_annotation</span><span class="p">]</span>
-
-                            <span class="c"># Compute the permanence</span>
-                            <span class="k">if</span> <span class="n">parent_annotation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">feature_permanence</span><span class="p">:</span>
-                                <span class="n">feature_permanence</span><span class="p">[</span><span class="n">parent_annotation</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-
-                            <span class="k">if</span> <span class="n">child_annotation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">feature_permanence</span><span class="p">[</span><span class="n">parent_annotation</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                                <span class="n">feature_permanence</span><span class="p">[</span><span class="n">parent_annotation</span><span class="p">][</span><span class="n">child_annotation</span><span class="p">]</span> <span class="o">=</span> \
-                                    <span class="n">child</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">length</span>
-                            <span class="k">else</span><span class="p">:</span>
-                                <span class="n">feature_permanence</span><span class="p">[</span><span class="n">parent_annotation</span><span class="p">][</span><span class="n">child_annotation</span><span class="p">]</span> <span class="o">+=</span> \
-                                    <span class="n">child</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">length</span>
-
-                            <span class="c">#    feature_permanence[child_annotation] += node.edge.length</span>
-                            <span class="c"># else:</span>
-                            <span class="c">#    feature_permanence[child_annotation] = node.edge.length</span>
-
-                            <span class="c"># Call switches</span>
-
-                            <span class="k">if</span> <span class="n">parent_annotation</span> <span class="o">!=</span> <span class="n">child_annotation</span><span class="p">:</span>
-                                <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
-                                <span class="n">sc</span> <span class="o">+=</span> <span class="mi">1</span>
-                            <span class="k">else</span><span class="p">:</span>
-                                <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
-
-                            <span class="c"># Store</span>
-                            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s">&#39;FROM-ID&#39;</span><span class="p">:</span> <span class="n">parent_id</span><span class="p">,</span>
-                                             <span class="s">&#39;TO-ID&#39;</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
-                                             <span class="s">&#39;F-AGE&#39;</span><span class="p">:</span> <span class="n">parent_height</span><span class="p">,</span>
-                                             <span class="s">&#39;T-AGE&#39;</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="s">&#39;height&#39;</span><span class="p">],</span>
-                                             <span class="s">&#39;DURATION&#39;</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">length</span><span class="p">,</span>
-                                             <span class="s">&#39;VFROM&#39;</span><span class="p">:</span> <span class="n">parent_annotation</span><span class="p">,</span>
-                                             <span class="s">&#39;VTO&#39;</span><span class="p">:</span> <span class="n">child_annotation</span><span class="p">,</span>
-                                             <span class="s">&#39;C&#39;</span><span class="p">:</span> <span class="n">c</span><span class="p">})</span>
-
-                            <span class="c"># Re-assigning internal values</span>
-                            <span class="n">parent_annotation</span> <span class="o">=</span> <span class="n">child_annotation</span>
-                            <span class="n">parent_id</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">label</span>
-                            <span class="n">parent_height</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="s">&#39;height&#39;</span><span class="p">]</span>
-
-                            <span class="c"># Complete visiting the node, adding an annotation indicating the</span>
-                            <span class="c"># successful visit</span>
-                            <span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">add_new</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;visited&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - The discrete trait [&quot;</span> <span class="o">+</span>
-                 <span class="n">args</span><span class="o">.</span><span class="n">feature_annotation</span> <span class="o">+</span> <span class="s">&#39;] shows &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39; switches on the trunk&#39;</span><span class="p">)</span>
-
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="o">+</span><span class="s">&#39;_summary.csv&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
-
-        <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;VFROM&#39;</span><span class="p">,</span> <span class="s">&#39;VTO&#39;</span><span class="p">,</span> <span class="s">&#39;DURATION&#39;</span><span class="p">]</span>
-        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
-
-        <span class="k">for</span> <span class="n">vfrom</span> <span class="ow">in</span> <span class="n">feature_permanence</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="k">for</span> <span class="n">vto</span> <span class="ow">in</span> <span class="n">feature_permanence</span><span class="p">[</span><span class="n">vfrom</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                <span class="k">if</span> <span class="n">vfrom</span> <span class="o">==</span> <span class="n">vto</span><span class="p">:</span>
-                    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s">&#39;VFROM&#39;</span><span class="p">:</span> <span class="n">vfrom</span><span class="p">,</span>
-                                     <span class="s">&#39;VTO&#39;</span><span class="p">:</span> <span class="n">vto</span><span class="p">,</span>
-                                     <span class="s">&#39;DURATION&#39;</span><span class="p">:</span> <span class="n">feature_permanence</span><span class="p">[</span><span class="n">vfrom</span><span class="p">][</span><span class="n">vto</span><span class="p">]})</span>
-
-    <span class="c"># pprint.pprint(feature_permanence, width=1)</span>
-
-<span class="c"># Main execution routine</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-
-    <span class="c"># Parse calling arguments</span>
-    <span class="n">parsed_args</span> <span class="o">=</span> <span class="n">arg_parser</span><span class="p">()</span>
-    <span class="c"># Call main routine</span>
-    <span class="n">main</span><span class="p">(</span><span class="n">parsed_args</span><span class="p">)</span>
-
-    <span class="c"># Exit program</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-
+__project__ = 'phylo-tools'
+__product__ = 'trunktraitevolution'
+__editor__ = 'PyCharm'
+__author__ = 'lorenzogatti'
+__copyright__ = "Copyright 2016, Applied Computational Genomics Team (ACGT)"
+__credits__ = ["Lorenzo Gatti"]
+__license__ = "GPL"
+__date__ = '16/06/16'
+__version__ = "1.0"
+__maintainer__ = "Lorenzo Gatti"
+__email__ = "lorenzo.gatti@zhaw.ch"
+__status__ = "Development"
+
+
+# Routines
+def arg_parser():
+    """
+    This function parses the arguments passed from the command line to the script
+
+    Returns:
+        It returns an object containing all the recognised arguments properly formatted
+    """
+
+    parser = argparse.ArgumentParser(prog='findtrunk.py',
+                                     description='Retrieve the phylogenetic trunk from the tree '
+                                                 'topology using a reverse-tree-traversal '
+                                                 'approach.')
+    parser.add_argument("-i", "--in", type=str, dest="input_file", required=True,
+                        help='Input tree file')
+    parser.add_argument("--input-format", type=str, dest="input_format", required=True,
+                        help='Input tree file format')
+    parser.add_argument("-o", "--out", dest="output_file", type=str, required=False,
+                        default='', help='Output tree file')
+    parser.add_argument("--feature", dest="feature_annotation", type=str, required=True,
+                        default='', help='Discrete trait')
+    parser.add_argument("--trunk-threshold", dest="trunk_threshold", type=int, required=False,
+                        default=0, help='Trunk value threshold')
+    parser.add_argument("-l", "--label", dest="data_label", type=str, required=False,
+                        default='', help='Label for the data contained in the tree')
+    parser.add_argument("--log", dest="log_level", type=str, required=False,
+                        default='INFO', help='Log level for the routine (--log=INFO)')
+    parser.add_argument("--log_to_file", dest="log_to_file", type=bool, required=False,
+                        default='', help='Log filename for the routine')
+
+    return parser.parse_args()
+
+
+def main(args):
+    """
+    This function executes the routines required by the program to identify the number of switches
+    and the permanence of the discrete trait on the tree trunk
+
+    `args` is a the object returned by `arg_parser` function.
+    """
+
+    # Prepare output variables
+    if not args.output_file:
+
+        filename = os.path.dirname(args.input_file) + '/' + args.data_label + '_' \
+                   + args.feature_annotation
+
+        args.output_file = filename
+
+    # Prepare logging device
+    numeric_level = getattr(logging, args.log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError('Invalid log level: %s' % args.log_level)
+
+    logging.getLogger(__product__)
+    if args.log_to_file:
+
+        logging.basicConfig(filename=args.log_file,
+                            level=numeric_level,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
+    else:
+
+        args.log_file = os.path.dirname(args.input_file) + '/' + args.data_label + '_out.log'
+
+        logging.basicConfig(level=numeric_level,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
+
+    logging.debug(__project__ + ":" + __product__ + " - Execution started")
+
+    # Read the tree file
+    tree = dendropy.Tree.get(path=args.input_file,
+                             schema=args.input_format,
+                             extract_comment_metadata=True)
+
+    feature_permanence = dict()
+
+    with open(args.output_file+'_switches.csv', 'w') as csvfile:
+
+        fieldnames = ['FROM-ID', 'TO-ID', 'F-AGE', 'T-AGE', 'DURATION', 'VFROM', 'VTO', 'C']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        sc = 0
+        # per each node in the tree topology, loop over the child nodes and retrieve the length
+        # of the branch grouped according to
+        for node in tree.preorder_node_iter():
+        #for node in tree.leaf_node_iter():
+            # check if the node has been already visited before
+            #if 'visited' not in node.annotations.values_as_dict().keys():
+            if not node._annotations.get_value('visited'):
+                # get the requested annotation for the parent node
+                #parent_annotation = node.annotations.values_as_dict()[args.feature_annotation]
+                parent_annotation = node._annotations.get_value(args.feature_annotation)
+                parent_id = node.label
+                #parent_height = node.annotations.values_as_dict()['height']
+                parent_height = node._annotations.get_value('height')
+                # Per each child node in the tree starting from the node selected in
+                # preorder-traversing
+                for child in node.child_nodes():
+
+                    # Check if the child has been labelled with a number
+                    if child.label:
+                        # count the number of switches for the discrete trait occurring on the
+                        # trunk of the tree
+                        #if int(child.annotations.values_as_dict()['trunk']) > args.trunk_threshold:
+                        if int(child._annotations.get_value('trunk')) > args.trunk_threshold:
+                            # Get annotation of the current child node
+                            child_annotation = child._annotations.get_value(args.feature_annotation)
+                         #   child_annotation = child.annotations.values_as_dict()[
+                         #       args.feature_annotation]
+
+                            # Compute the permanence
+                            if parent_annotation not in feature_permanence:
+                                feature_permanence[parent_annotation] = {}
+
+                            if child_annotation not in feature_permanence[parent_annotation]:
+                                feature_permanence[parent_annotation][child_annotation] = \
+                                    child.edge.length
+                            else:
+                                feature_permanence[parent_annotation][child_annotation] += \
+                                    child.edge.length
+
+                            #    feature_permanence[child_annotation] += node.edge.length
+                            # else:
+                            #    feature_permanence[child_annotation] = node.edge.length
+
+                            # Call switches
+                            if parent_annotation != child_annotation:
+                                c = 1
+                                sc += 1
+                            else:
+                                c = 0
+
+                            # Store
+                            writer.writerow({'FROM-ID': parent_id,
+                                             'TO-ID': child.label,
+                                             'F-AGE': parent_height,
+                                             #'T-AGE': child.annotations.values_as_dict()['height'],
+                                             'T-AGE': child._annotations.get_value('height'),
+                                             'DURATION': child.edge.length,
+                                             'VFROM': parent_annotation,
+                                             'VTO': child_annotation,
+                                             'C': c})
+
+                            # Re-assigning internal values
+                            parent_annotation = child_annotation
+                            parent_id = child.label
+                            #parent_height = child.annotations.values_as_dict()['height']
+                            parent_height = child._annotations.get_value('height')
+                            # Complete visiting the node, adding an annotation indicating the
+                            # successful visit
+                            child.annotations.add_new(name="visited", value=1)
+
+    logging.info(__project__ + ":" + __product__ + " - The discrete trait [" +
+                 args.feature_annotation + '] shows ' + str(sc) + ' switches on the trunk')
+
+    with open(args.output_file+'_summary.csv', 'w') as csvfile:
+
+        fieldnames = ['VFROM', 'VTO', 'DURATION']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for vfrom in feature_permanence:
+            for vto in feature_permanence[vfrom]:
+                if vfrom == vto:
+                    writer.writerow({'VFROM': vfrom,
+                                     'VTO': vto,
+                                     'DURATION': feature_permanence[vfrom][vto]})
+
+    # pprint.pprint(feature_permanence, width=1)
+
+# Main execution routine
+if __name__ == "__main__":
+
+    # Parse calling arguments
+    parsed_args = arg_parser()
+    # Call main routine
+    main(parsed_args)
+
+    # Exit program
+    sys.exit(0)
+</code></pre>
   </div>
 
   </header>
@@ -1399,38 +1333,37 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-trunktraitevolution.arg_parser', this);">Show source &equiv;</a></p>
   <div id="source-trunktraitevolution.arg_parser" class="source">
-    <div class="codehilite"><pre><span class="k">def</span> <span class="nf">arg_parser</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function parses the arguments passed from the command line to the script</span>
+    <pre><code>def arg_parser():
+    """
+    This function parses the arguments passed from the command line to the script
 
-<span class="sd">    Returns:</span>
-<span class="sd">        It returns an object containing all the recognised arguments properly formatted</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+    Returns:
+        It returns an object containing all the recognised arguments properly formatted
+    """
 
-    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">prog</span><span class="o">=</span><span class="s">&#39;findtrunk.py&#39;</span><span class="p">,</span>
-                                     <span class="n">description</span><span class="o">=</span><span class="s">&#39;Retrieve the phylogenetic trunk from the tree &#39;</span>
-                                                 <span class="s">&#39;topology using a reverse-tree-traversal &#39;</span>
-                                                 <span class="s">&#39;approach.&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-i&quot;</span><span class="p">,</span> <span class="s">&quot;--in&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;input_file&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s">&#39;Input tree file&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--input-format&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;input_format&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">help</span><span class="o">=</span><span class="s">&#39;Input tree file format&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-o&quot;</span><span class="p">,</span> <span class="s">&quot;--out&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;output_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Output tree file&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--feature&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;feature_annotation&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Discrete trait&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--trunk-threshold&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;trunk_threshold&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Trunk value threshold&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;-l&quot;</span><span class="p">,</span> <span class="s">&quot;--label&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;data_label&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Label for the data contained in the tree&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--log&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;log_level&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;INFO&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Log level for the routine (--log=INFO)&#39;</span><span class="p">)</span>
-    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">&quot;--log_to_file&quot;</span><span class="p">,</span> <span class="n">dest</span><span class="o">=</span><span class="s">&quot;log_to_file&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">bool</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                        <span class="n">default</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s">&#39;Log filename for the routine&#39;</span><span class="p">)</span>
+    parser = argparse.ArgumentParser(prog='findtrunk.py',
+                                     description='Retrieve the phylogenetic trunk from the tree '
+                                                 'topology using a reverse-tree-traversal '
+                                                 'approach.')
+    parser.add_argument("-i", "--in", type=str, dest="input_file", required=True,
+                        help='Input tree file')
+    parser.add_argument("--input-format", type=str, dest="input_format", required=True,
+                        help='Input tree file format')
+    parser.add_argument("-o", "--out", dest="output_file", type=str, required=False,
+                        default='', help='Output tree file')
+    parser.add_argument("--feature", dest="feature_annotation", type=str, required=True,
+                        default='', help='Discrete trait')
+    parser.add_argument("--trunk-threshold", dest="trunk_threshold", type=int, required=False,
+                        default=0, help='Trunk value threshold')
+    parser.add_argument("-l", "--label", dest="data_label", type=str, required=False,
+                        default='', help='Label for the data contained in the tree')
+    parser.add_argument("--log", dest="log_level", type=str, required=False,
+                        default='INFO', help='Log level for the routine (--log=INFO)')
+    parser.add_argument("--log_to_file", dest="log_to_file", type=bool, required=False,
+                        default='', help='Log filename for the routine')
 
-    <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-</pre></div>
-
+    return parser.parse_args()
+</code></pre>
   </div>
 </div>
 
@@ -1451,142 +1384,143 @@ and the permanence of the discrete trait on the tree trunk</p>
   <div class="source_cont">
   <p class="source_link"><a href="javascript:void(0);" onclick="toggle('source-trunktraitevolution.main', this);">Show source &equiv;</a></p>
   <div id="source-trunktraitevolution.main" class="source">
-    <div class="codehilite"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This function executes the routines required by the program to identify the number of switches</span>
-<span class="sd">    and the permanence of the discrete trait on the tree trunk</span>
+    <pre><code>def main(args):
+    """
+    This function executes the routines required by the program to identify the number of switches
+    and the permanence of the discrete trait on the tree trunk
 
-<span class="sd">    `args` is a the object returned by `arg_parser` function.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+    `args` is a the object returned by `arg_parser` function.
+    """
 
-    <span class="c"># Prepare output variables</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="p">:</span>
+    # Prepare output variables
+    if not args.output_file:
 
-        <span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">data_label</span> <span class="o">+</span> <span class="s">&#39;_&#39;</span> \
-                   <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">feature_annotation</span>
+        filename = os.path.dirname(args.input_file) + '/' + args.data_label + '_' \
+                   + args.feature_annotation
 
-        <span class="n">args</span><span class="o">.</span><span class="n">output_file</span> <span class="o">=</span> <span class="n">filename</span>
+        args.output_file = filename
 
-    <span class="c"># Prepare logging device</span>
-    <span class="n">numeric_level</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">logging</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">log_level</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="bp">None</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numeric_level</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;Invalid log level: </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">args</span><span class="o">.</span><span class="n">log_level</span><span class="p">)</span>
+    # Prepare logging device
+    numeric_level = getattr(logging, args.log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError('Invalid log level: %s' % args.log_level)
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">__product__</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">log_to_file</span><span class="p">:</span>
+    logging.getLogger(__product__)
+    if args.log_to_file:
 
-        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">log_file</span><span class="p">,</span>
-                            <span class="n">level</span><span class="o">=</span><span class="n">numeric_level</span><span class="p">,</span>
-                            <span class="n">format</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(levelname)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
-                            <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
+        logging.basicConfig(filename=args.log_file,
+                            level=numeric_level,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
+    else:
 
-        <span class="n">args</span><span class="o">.</span><span class="n">log_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;/&#39;</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">data_label</span> <span class="o">+</span> <span class="s">&#39;_out.log&#39;</span>
+        args.log_file = os.path.dirname(args.input_file) + '/' + args.data_label + '_out.log'
 
-        <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">numeric_level</span><span class="p">,</span>
-                            <span class="n">format</span><span class="o">=</span><span class="s">&#39;</span><span class="si">%(asctime)s</span><span class="s"> - </span><span class="si">%(name)s</span><span class="s"> - </span><span class="si">%(levelname)s</span><span class="s"> - </span><span class="si">%(message)s</span><span class="s">&#39;</span><span class="p">,</span>
-                            <span class="n">datefmt</span><span class="o">=</span><span class="s">&#39;%m/</span><span class="si">%d</span><span class="s">/%Y %I:%M:%S %p&#39;</span><span class="p">)</span>
+        logging.basicConfig(level=numeric_level,
+                            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p')
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - Execution started&quot;</span><span class="p">)</span>
+    logging.debug(__project__ + ":" + __product__ + " - Execution started")
 
-    <span class="c"># Read the tree file</span>
-    <span class="n">tree</span> <span class="o">=</span> <span class="n">dendropy</span><span class="o">.</span><span class="n">Tree</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input_file</span><span class="p">,</span>
-                             <span class="n">schema</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">input_format</span><span class="p">,</span>
-                             <span class="n">extract_comment_metadata</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    # Read the tree file
+    tree = dendropy.Tree.get(path=args.input_file,
+                             schema=args.input_format,
+                             extract_comment_metadata=True)
 
-    <span class="n">feature_permanence</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    feature_permanence = dict()
 
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="o">+</span><span class="s">&#39;_switches.csv&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    with open(args.output_file+'_switches.csv', 'w') as csvfile:
 
-        <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;FROM-ID&#39;</span><span class="p">,</span> <span class="s">&#39;TO-ID&#39;</span><span class="p">,</span> <span class="s">&#39;F-AGE&#39;</span><span class="p">,</span> <span class="s">&#39;T-AGE&#39;</span><span class="p">,</span> <span class="s">&#39;DURATION&#39;</span><span class="p">,</span> <span class="s">&#39;VFROM&#39;</span><span class="p">,</span> <span class="s">&#39;VTO&#39;</span><span class="p">,</span> <span class="s">&#39;C&#39;</span><span class="p">]</span>
-        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
-        <span class="n">sc</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="c"># per each node in the tree topology, loop over the child nodes and retrieve the length</span>
-        <span class="c"># of the branch grouped according to</span>
-        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">tree</span><span class="o">.</span><span class="n">preorder_node_iter</span><span class="p">():</span>
+        fieldnames = ['FROM-ID', 'TO-ID', 'F-AGE', 'T-AGE', 'DURATION', 'VFROM', 'VTO', 'C']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        sc = 0
+        # per each node in the tree topology, loop over the child nodes and retrieve the length
+        # of the branch grouped according to
+        for node in tree.preorder_node_iter():
+        #for node in tree.leaf_node_iter():
+            # check if the node has been already visited before
+            #if 'visited' not in node.annotations.values_as_dict().keys():
+            if not node._annotations.get_value('visited'):
+                # get the requested annotation for the parent node
+                #parent_annotation = node.annotations.values_as_dict()[args.feature_annotation]
+                parent_annotation = node._annotations.get_value(args.feature_annotation)
+                parent_id = node.label
+                #parent_height = node.annotations.values_as_dict()['height']
+                parent_height = node._annotations.get_value('height')
+                # Per each child node in the tree starting from the node selected in
+                # preorder-traversing
+                for child in node.child_nodes():
 
-            <span class="c"># check if the node has been already visited before</span>
-            <span class="k">if</span> <span class="s">&#39;visited&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                    # Check if the child has been labelled with a number
+                    if child.label:
+                        # count the number of switches for the discrete trait occurring on the
+                        # trunk of the tree
+                        #if int(child.annotations.values_as_dict()['trunk']) > args.trunk_threshold:
+                        if int(child._annotations.get_value('trunk')) > args.trunk_threshold:
+                            # Get annotation of the current child node
+                            child_annotation = child._annotations.get_value(args.feature_annotation)
+                         #   child_annotation = child.annotations.values_as_dict()[
+                         #       args.feature_annotation]
 
-                <span class="c"># get the requested annotation for the parent node</span>
-                <span class="n">parent_annotation</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="n">args</span><span class="o">.</span><span class="n">feature_annotation</span><span class="p">]</span>
-                <span class="n">parent_id</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">label</span>
-                <span class="n">parent_height</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="s">&#39;height&#39;</span><span class="p">]</span>
+                            # Compute the permanence
+                            if parent_annotation not in feature_permanence:
+                                feature_permanence[parent_annotation] = {}
 
-                <span class="c"># Per each child node in the tree starting from the node selected in</span>
-                <span class="c"># preorder-traversing</span>
-                <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">child_nodes</span><span class="p">():</span>
+                            if child_annotation not in feature_permanence[parent_annotation]:
+                                feature_permanence[parent_annotation][child_annotation] = \
+                                    child.edge.length
+                            else:
+                                feature_permanence[parent_annotation][child_annotation] += \
+                                    child.edge.length
 
-                    <span class="c"># Check if the child has been labelled with a number</span>
-                    <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">label</span><span class="p">:</span>
-                        <span class="c"># count the number of switches for the discrete trait occurring on the</span>
-                        <span class="c"># trunk of the tree</span>
-                        <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="s">&#39;trunk&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">args</span><span class="o">.</span><span class="n">trunk_threshold</span><span class="p">:</span>
+                            #    feature_permanence[child_annotation] += node.edge.length
+                            # else:
+                            #    feature_permanence[child_annotation] = node.edge.length
 
-                            <span class="c"># Get annotation of the current child node</span>
-                            <span class="n">child_annotation</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span>
-                                <span class="n">args</span><span class="o">.</span><span class="n">feature_annotation</span><span class="p">]</span>
+                            # Call switches
+                            if parent_annotation != child_annotation:
+                                c = 1
+                                sc += 1
+                            else:
+                                c = 0
 
-                            <span class="c"># Compute the permanence</span>
-                            <span class="k">if</span> <span class="n">parent_annotation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">feature_permanence</span><span class="p">:</span>
-                                <span class="n">feature_permanence</span><span class="p">[</span><span class="n">parent_annotation</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+                            # Store
+                            writer.writerow({'FROM-ID': parent_id,
+                                             'TO-ID': child.label,
+                                             'F-AGE': parent_height,
+                                             #'T-AGE': child.annotations.values_as_dict()['height'],
+                                             'T-AGE': child._annotations.get_value('height'),
+                                             'DURATION': child.edge.length,
+                                             'VFROM': parent_annotation,
+                                             'VTO': child_annotation,
+                                             'C': c})
 
-                            <span class="k">if</span> <span class="n">child_annotation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">feature_permanence</span><span class="p">[</span><span class="n">parent_annotation</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                                <span class="n">feature_permanence</span><span class="p">[</span><span class="n">parent_annotation</span><span class="p">][</span><span class="n">child_annotation</span><span class="p">]</span> <span class="o">=</span> \
-                                    <span class="n">child</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">length</span>
-                            <span class="k">else</span><span class="p">:</span>
-                                <span class="n">feature_permanence</span><span class="p">[</span><span class="n">parent_annotation</span><span class="p">][</span><span class="n">child_annotation</span><span class="p">]</span> <span class="o">+=</span> \
-                                    <span class="n">child</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">length</span>
+                            # Re-assigning internal values
+                            parent_annotation = child_annotation
+                            parent_id = child.label
+                            #parent_height = child.annotations.values_as_dict()['height']
+                            parent_height = child._annotations.get_value('height')
+                            # Complete visiting the node, adding an annotation indicating the
+                            # successful visit
+                            child.annotations.add_new(name="visited", value=1)
 
-                            <span class="c">#    feature_permanence[child_annotation] += node.edge.length</span>
-                            <span class="c"># else:</span>
-                            <span class="c">#    feature_permanence[child_annotation] = node.edge.length</span>
+    logging.info(__project__ + ":" + __product__ + " - The discrete trait [" +
+                 args.feature_annotation + '] shows ' + str(sc) + ' switches on the trunk')
 
-                            <span class="c"># Call switches</span>
+    with open(args.output_file+'_summary.csv', 'w') as csvfile:
 
-                            <span class="k">if</span> <span class="n">parent_annotation</span> <span class="o">!=</span> <span class="n">child_annotation</span><span class="p">:</span>
-                                <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
-                                <span class="n">sc</span> <span class="o">+=</span> <span class="mi">1</span>
-                            <span class="k">else</span><span class="p">:</span>
-                                <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
+        fieldnames = ['VFROM', 'VTO', 'DURATION']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
 
-                            <span class="c"># Store</span>
-                            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s">&#39;FROM-ID&#39;</span><span class="p">:</span> <span class="n">parent_id</span><span class="p">,</span>
-                                             <span class="s">&#39;TO-ID&#39;</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
-                                             <span class="s">&#39;F-AGE&#39;</span><span class="p">:</span> <span class="n">parent_height</span><span class="p">,</span>
-                                             <span class="s">&#39;T-AGE&#39;</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="s">&#39;height&#39;</span><span class="p">],</span>
-                                             <span class="s">&#39;DURATION&#39;</span><span class="p">:</span> <span class="n">child</span><span class="o">.</span><span class="n">edge</span><span class="o">.</span><span class="n">length</span><span class="p">,</span>
-                                             <span class="s">&#39;VFROM&#39;</span><span class="p">:</span> <span class="n">parent_annotation</span><span class="p">,</span>
-                                             <span class="s">&#39;VTO&#39;</span><span class="p">:</span> <span class="n">child_annotation</span><span class="p">,</span>
-                                             <span class="s">&#39;C&#39;</span><span class="p">:</span> <span class="n">c</span><span class="p">})</span>
-
-                            <span class="c"># Re-assigning internal values</span>
-                            <span class="n">parent_annotation</span> <span class="o">=</span> <span class="n">child_annotation</span>
-                            <span class="n">parent_id</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">label</span>
-                            <span class="n">parent_height</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">values_as_dict</span><span class="p">()[</span><span class="s">&#39;height&#39;</span><span class="p">]</span>
-
-                            <span class="c"># Complete visiting the node, adding an annotation indicating the</span>
-                            <span class="c"># successful visit</span>
-                            <span class="n">child</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">add_new</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;visited&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">__project__</span> <span class="o">+</span> <span class="s">&quot;:&quot;</span> <span class="o">+</span> <span class="n">__product__</span> <span class="o">+</span> <span class="s">&quot; - The discrete trait [&quot;</span> <span class="o">+</span>
-                 <span class="n">args</span><span class="o">.</span><span class="n">feature_annotation</span> <span class="o">+</span> <span class="s">&#39;] shows &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39; switches on the trunk&#39;</span><span class="p">)</span>
-
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">output_file</span><span class="o">+</span><span class="s">&#39;_summary.csv&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
-
-        <span class="n">fieldnames</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;VFROM&#39;</span><span class="p">,</span> <span class="s">&#39;VTO&#39;</span><span class="p">,</span> <span class="s">&#39;DURATION&#39;</span><span class="p">]</span>
-        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
-        <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
-
-        <span class="k">for</span> <span class="n">vfrom</span> <span class="ow">in</span> <span class="n">feature_permanence</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="k">for</span> <span class="n">vto</span> <span class="ow">in</span> <span class="n">feature_permanence</span><span class="p">[</span><span class="n">vfrom</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                <span class="k">if</span> <span class="n">vfrom</span> <span class="o">==</span> <span class="n">vto</span><span class="p">:</span>
-                    <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">({</span><span class="s">&#39;VFROM&#39;</span><span class="p">:</span> <span class="n">vfrom</span><span class="p">,</span>
-                                     <span class="s">&#39;VTO&#39;</span><span class="p">:</span> <span class="n">vto</span><span class="p">,</span>
-                                     <span class="s">&#39;DURATION&#39;</span><span class="p">:</span> <span class="n">feature_permanence</span><span class="p">[</span><span class="n">vfrom</span><span class="p">][</span><span class="n">vto</span><span class="p">]})</span>
-</pre></div>
-
+        for vfrom in feature_permanence:
+            for vto in feature_permanence[vfrom]:
+                if vfrom == vto:
+                    writer.writerow({'VFROM': vfrom,
+                                     'VTO': vto,
+                                     'DURATION': feature_permanence[vfrom][vto]})
+</code></pre>
   </div>
 </div>
 
