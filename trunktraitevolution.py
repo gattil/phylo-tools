@@ -175,6 +175,7 @@ def main(args):
         for node in tree.preorder_node_iter():
         #for node in tree.leaf_node_iter():
             # check if the node has been already visited before
+            logging.debug(__project__ + ":" + __product__ + " - Visiting node " + str(node.label))
             #if 'visited' not in node.annotations.values_as_dict().keys():
             if not node._annotations.get_value('visited'):
                 # get the requested annotation for the parent node
